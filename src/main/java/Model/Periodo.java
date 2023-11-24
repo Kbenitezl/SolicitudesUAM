@@ -8,6 +8,11 @@ import jakarta.persistence.*;
 @Entity
 @Getter
 @Setter
+@NamedQueries(
+        {
+        @NamedQuery(name = "Periodo.findAll", query = "SELECT p FROM Periodo p")
+                }
+                )
 public class Periodo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
